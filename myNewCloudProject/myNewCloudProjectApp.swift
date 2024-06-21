@@ -9,8 +9,10 @@ import SwiftUI
 
 @main
 struct myNewCloudProjectApp: App {
+    
     var body: some Scene {
         WindowGroup {
+    
             ContentView()
         }
     }
