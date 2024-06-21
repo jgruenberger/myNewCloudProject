@@ -11,8 +11,7 @@ then
     echo "DEPLOY WORKFLOW"
 else
     echo "NOT DEPLOY WORKFLOW"
-
-
+fi
 
 
 # Fetch JWT
