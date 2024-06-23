@@ -22,7 +22,7 @@ export JWT=$(ruby -r 'base64' -r 'openssl' -r 'json' -e "
 ")
 
 echo "token:::"
-echo JWT
+echo $JWT
 echo ":::token"
 
 # Promote build to App Store
