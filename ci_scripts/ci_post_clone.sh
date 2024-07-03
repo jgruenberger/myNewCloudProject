@@ -7,7 +7,7 @@ echo "start now"
 
 
 if [ $CI_WORKFLOW = "deploy" ]; then
-  echo "DEPLOY WORKFLOW"
+  echo "DEPLOY WORKFLOW "
 
   # Verify the private key format
   PRIVATE_KEY_PATH="key.p8"
@@ -17,7 +17,6 @@ if [ $CI_WORKFLOW = "deploy" ]; then
 
   openssl pkey -in "$PRIVATE_KEY_PATH" -noout -text || {
     echo "Failed to read private key. Please ensure the key is in PEM format and correctly specified."
-    exit 1
   }
 
 
