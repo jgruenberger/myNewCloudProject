@@ -1,0 +1,7 @@
+# The Deliverfile allows you to store various App Store Connect metadata
+# For more information, check out the docs
+# https://docs.fastlane.tools/actions/deliver/
+
+json_key = "key.p8"
+issuer_id = "69a6de76-b502-47e3-e053-5b8c7c11a4d1"
+key_id = "983ML848JR"
