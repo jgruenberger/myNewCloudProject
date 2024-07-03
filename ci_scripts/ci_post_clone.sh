@@ -12,7 +12,7 @@ if [ $CI_WORKFLOW = "deploy" ]; then
 
   # Verify the private key format
   PRIVATE_KEY_PATH="fastlane/key.p8"
-  printf "%s" "$KEY_CONTENT" > $PRIVATE_KEY_PATH
+  #printf "%s" "$KEY_CONTENT" > $PRIVATE_KEY_PATH
 
   echo "Private key path: $PRIVATE_KEY_PATH"
 
