@@ -30,9 +30,11 @@ platform :ios do
 
 
     # Fetch the latest build from TestFlight
-    latest_build_number = latest_testflight_build_number(
-      app_identifier: "com.threedeers.myCloudApp.myNewCloudProject"
-    )
+#     latest_build_number = latest_testflight_build_number(
+#       app_identifier: "com.threedeers.myCloudApp.myNewCloudProject"
+#     )
+
+    puts "Try to deliver version: #{version_number} with build #{build_number}"
 
     # Ensure the metadata is up to date
     deliver(
