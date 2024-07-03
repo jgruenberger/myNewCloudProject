@@ -11,7 +11,7 @@ if [ $CI_WORKFLOW = "deploy" ]; then
   brew install fastlane
 
   # Verify the private key format
-  PRIVATE_KEY_PATH="key.p8"
+  PRIVATE_KEY_PATH="fastlane/key.p8"
   printf "%s" "$KEY_CONTENT" > $PRIVATE_KEY_PATH
 
   echo "Private key path: $PRIVATE_KEY_PATH"
