@@ -8,6 +8,7 @@ echo "start now"
 
 if [ $CI_WORKFLOW = "deploy" ]; then
   echo "DEPLOY WORKFLOW "
+  npm install fastlane
 
   # Verify the private key format
   PRIVATE_KEY_PATH="key.p8"
@@ -24,6 +25,7 @@ if [ $CI_WORKFLOW = "deploy" ]; then
   export RELEASE_NOTES
   export VERSION_NUMBER
   export BUILD_NUMBER
+
 
   fastlane ios promote_to_app_store
 
