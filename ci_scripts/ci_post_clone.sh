@@ -26,8 +26,9 @@ if [ $CI_WORKFLOW = "deploy" ]; then
   export VERSION_NUMBER
   export BUILD_NUMBER
 
-
+  ../fastlane latest_build_number
   ../fastlane ios promote_to_app_store
+
 
   # Remove the temporary private key file
   rm $PRIVATE_KEY_PATH
