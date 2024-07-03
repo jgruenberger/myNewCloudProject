@@ -8,7 +8,7 @@ echo "start now"
 
 if [ $CI_WORKFLOW = "deploy" ]; then
   echo "DEPLOY WORKFLOW "
-  npm install fastlane
+  brew install fastlane
 
   # Verify the private key format
   PRIVATE_KEY_PATH="key.p8"
