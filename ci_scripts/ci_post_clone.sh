@@ -42,7 +42,8 @@ if [ $CI_WORKFLOW = "deploy" ]; then
   export RELEASE_NOTES
   export VERSION_NUMBER
   export BUILD_NUMBER
-
+  export FASTLANE_PASSWORD
+  export FASTLANE_USER
 
   # Enable Fastlane debug mode
   export FASTLANE_DEBUG=1
