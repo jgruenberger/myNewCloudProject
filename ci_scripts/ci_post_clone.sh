@@ -46,7 +46,7 @@ if [ $CI_WORKFLOW = "deploy" ]; then
   # Enable Fastlane debug mode
   export FASTLANE_DEBUG=1
 
-  fastlane ios latest_build_number
+  bundle exec fastlane ios latest_build_number
 
 
 
