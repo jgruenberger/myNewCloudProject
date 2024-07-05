@@ -29,7 +29,7 @@ platform :ios do
     }
     build_number = ENV['BUILD_NUMBER']
 
-    pwd =  = ENV['$FASTLANE_PASSWORD']
+    pwd = ENV['$FASTLANE_PASSWORD']
 
 
     puts "Try to deliver version: #{version_number} with build #{build_number}"
