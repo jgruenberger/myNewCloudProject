@@ -59,6 +59,15 @@ platform :ios do
   end
     lane :latest_build_number do
 
+        version_number = ENV['VERSION_NUMBER']
+        release_notes = ENV['RELEASE_NOTES']
+
+        puts "CI_WORKFLOW: #{version_number}"
+        puts "RELEASE_NOTES: #{release_notes}"
+        puts "APP_STORE_CONNECT_API_KEY_PATH: #{ENV['APP_STORE_CONNECT_API_KEY_PATH']}"
+        puts "APP_STORE_CONNECT_ISSUER_ID: #{ENV['APP_STORE_CONNECT_ISSUER_ID']}"
+        puts "APP_STORE_CONNECT_KEY_ID: #{ENV['APP_STORE_CONNECT_KEY_ID']}"#
+
       # Fetch the latest build from TestFlight
       latest_build_number = latest_testflight_build_number(
         app_identifier: "com.threedeers.myCloudApp.myNewCloudProject"

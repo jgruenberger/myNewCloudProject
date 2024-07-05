@@ -13,6 +13,11 @@ if [ $CI_WORKFLOW = "deploy" ]; then
 
   # Navigate to the fastlane directory
   cd ../fastlane
+
+
+    # Remove the temporary private key file
+    rm $PRIVATE_KEY_PATH
+
   echo "****************** Contents of the fastlane directory:"
   ls -l
 
@@ -37,6 +42,9 @@ if [ $CI_WORKFLOW = "deploy" ]; then
   export VERSION_NUMBER
   export BUILD_NUMBER
 
+
+  # Enable Fastlane debug mode
+  export FASTLANE_DEBUG=1
 
   fastlane ios latest_build_number
 
