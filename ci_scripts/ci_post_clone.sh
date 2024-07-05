@@ -48,7 +48,7 @@ if [ $CI_WORKFLOW = "deploy" ]; then
   export FASTLANE_DEBUG=1
 
 
-  fastlane ios latest_build_number
+  fastlane ios promote_to_app_store
 
 
 
