@@ -17,15 +17,6 @@ default_platform(:ios)
 
 
 platform :ios do
- before_all do
-
-
-    password_devid = ENV['$FASTLANE_PASSWORD']
-    puts "fastlane password-----------> #{password_devid}"
-
- end
-
-platform :ios do
   desc "Promote a TestFlight build to App Store and submit for review"
   lane :promote_to_app_store do
 
@@ -38,13 +29,11 @@ platform :ios do
     }
     build_number = ENV['BUILD_NUMBER']
 
+    pwd =  = ENV['$FASTLANE_PASSWORD']
 
-    # Fetch the latest build from TestFlight
-#     latest_build_number = latest_testflight_build_number(
-#       app_identifier: "com.threedeers.myCloudApp.myNewCloudProject"
-#     )
 
     puts "Try to deliver version: #{version_number} with build #{build_number}"
+    puts "**********************pwd #{pwd}"
 
     # Ensure the metadata is up to date
     deliver(
