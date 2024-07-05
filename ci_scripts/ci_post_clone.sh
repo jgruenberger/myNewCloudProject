@@ -8,10 +8,16 @@ echo "start now"
 
 if [ $CI_WORKFLOW = "deploy" ]; then
   echo "DEPLOY WORKFLOW "
+
   brew install fastlane
 
+  # Navigate to the fastlane directory
+  cd ../fastlane
+  echo "****************** Contents of the fastlane directory:"
+  ls -l
+
   # Verify the private key format
-  PRIVATE_KEY_PATH="./fastlane/key.p8"
+  PRIVATE_KEY_PATH="key.p8"
   printf "%s" "$KEY_CONTENT" > $PRIVATE_KEY_PATH
 
   echo "Private key path: $PRIVATE_KEY_PATH"
@@ -23,14 +29,15 @@ if [ $CI_WORKFLOW = "deploy" ]; then
     echo "Failed to read private key. Please ensure the key is in PEM format and correctly specified."
   }
 
+  echo "********************* Contents of the fastlane directory after key generation:"
+  ls -l
 
   # Set environment variables
   export RELEASE_NOTES
   export VERSION_NUMBER
   export BUILD_NUMBER
 
-  # Navigate to the fastlane directory
-  cd ../fastlane
+
   fastlane ios latest_build_number
 
 
