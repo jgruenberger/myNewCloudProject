@@ -42,7 +42,7 @@ if [ $CI_WORKFLOW = "deploy" ]; then
   export RELEASE_NOTES
   export VERSION_NUMBER
   export BUILD_NUMBER
-  export FASTLANE_PASSWORD
+  #export FASTLANE_PASSWORD
   export FASTLANE_USER
   export FASTLANE_SESSION
 
