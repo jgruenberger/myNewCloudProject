@@ -44,8 +44,9 @@ if [ $CI_WORKFLOW = "deploy" ]; then
   export BUILD_NUMBER
   export FASTLANE_PASSWORD
   export FASTLANE_USER
+  export FASTLANE_SESSION
 
-  echo "The password: $FASTLANE_PASSWORD"
+  echo "The fastlane session: $FASTLANE_SESSION"
 
   # Enable Fastlane debug mode
   export FASTLANE_DEBUG=1
