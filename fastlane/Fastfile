@@ -62,7 +62,7 @@ platform :ios do
         version_number = ENV['VERSION_NUMBER']
         release_notes = ENV['RELEASE_NOTES']
 
-        puts "CI_WORKFLOW: #{version_number}"
+        puts "version_number: #{version_number}"
         puts "RELEASE_NOTES: #{release_notes}"
         puts "APP_STORE_CONNECT_API_KEY_PATH: #{ENV['APP_STORE_CONNECT_API_KEY_PATH']}"
         puts "APP_STORE_CONNECT_ISSUER_ID: #{ENV['APP_STORE_CONNECT_ISSUER_ID']}"
