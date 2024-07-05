@@ -10,7 +10,7 @@ if [ $CI_WORKFLOW = "deploy" ]; then
   echo "DEPLOY WORKFLOW "
 
   brew install fastlane
-  gem install bundler:2.5.4
+
 
   # Navigate to the fastlane directory
   cd ../fastlane
@@ -47,7 +47,8 @@ if [ $CI_WORKFLOW = "deploy" ]; then
   # Enable Fastlane debug mode
   export FASTLANE_DEBUG=1
 
-  bundle exec fastlane ios latest_build_number
+
+  fastlane ios latest_build_number
 
 
 
