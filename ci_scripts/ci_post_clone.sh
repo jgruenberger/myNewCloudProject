@@ -20,8 +20,12 @@ if [ $CI_WORKFLOW = "deploy" ]; then
   # Enable Fastlane debug mode
   #export FASTLANE_DEBUG=1
   cd ../fastlane
-  
-  fastlane ios promote_to_app_store
+
+  if [ $TESTRUN = "true" ]; then 
+    fastlane ios latest_build_number
+  else
+    fastlane ios promote_to_app_store
+  fi
 
   echo "Deployment done"
 
