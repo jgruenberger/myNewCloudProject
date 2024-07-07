@@ -16,8 +16,6 @@ if [ $CI_WORKFLOW = "deploy" ]; then
   cd ../fastlane
 
 
-    # Remove the temporary private key file
-    rm $PRIVATE_KEY_PATH
 
   echo "****************** Contents of the fastlane directory:"
   ls -l
@@ -43,6 +41,7 @@ if [ $CI_WORKFLOW = "deploy" ]; then
   export VERSION_NUMBER
   export BUILD_NUMBER
   export PRIVATE_KEY_PATH
+  export KEY_CONTENT
 
   #export FASTLANE_PASSWORD
   #export FASTLANE_USER
