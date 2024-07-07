@@ -43,8 +43,8 @@ if [ $CI_WORKFLOW = "deploy" ]; then
   export VERSION_NUMBER
   export BUILD_NUMBER
   #export FASTLANE_PASSWORD
-  export FASTLANE_USER
-  export FASTLANE_SESSION
+  #export FASTLANE_USER
+  #export FASTLANE_SESSION
 
   echo "The fastlane session: $FASTLANE_SESSION"
 
