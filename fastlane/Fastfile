@@ -67,6 +67,7 @@ platform :ios do
       app_version: version_number,
       skip_metadata: true,
       skip_screenshots: true,
+      precheck_include_in_app_purchases: false,
       force: true
     )
 
@@ -79,7 +80,7 @@ platform :ios do
       release_notes: release_notes,
       precheck_include_in_app_purchases: false,
       submit_for_review: true,
-      automatic_release: false
+      automatic_release: true
     )
     puts "Version: #{version_number} with build #{build_number} has been deployed"
 
